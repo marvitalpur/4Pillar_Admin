@@ -1,0 +1,88 @@
+// LoginScreen.scss
+
+$primary-gradient: linear-gradient(to bottom, #3e2466, #3f2766);
+$button-gradient: linear-gradient(to right, #f33ae4bb, #6338fec9);
+$black-overlay: rgba(0, 0, 0, 0.75);
+$glassmorphism-bg: rgba(255, 255, 255, 0.2);
+$glassmorphism-border: rgba(255, 255, 255, 0.15);
+
+.login-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+
+  .background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $primary-gradient, $black-overlay;
+  }
+
+  .glassmorphism-box {
+    padding: 30px;
+    border-radius: 15px;
+    background: $glassmorphism-bg;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    // border: 1px solid $glassmorphism-border;
+    width: 30%;
+    height: 55%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .login-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 4.0rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      // border-bottom: 1px solid $glassmorphism-border;
+      margin-bottom: 15px;
+      outline: none;
+      background-color: $glassmorphism-bg;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      color: #fff;
+      font-weight: 400;
+    }
+    input::placeholder {
+      color: #fff;
+      opacity: 1; /* Firefox */
+      font-weight: 400;
+     }
+     
+     input:-webkit-input-placeholder { /* Chrome, Safari, Opera */
+      color: #fff;
+      font-weight: 400;
+     }
+     
+     input::-ms-input-placeholder { /* Microsoft Edge */
+      color: #fff;
+      font-weight: 400;
+     }
+     
+
+    .gradient-button {
+      background: $button-gradient;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+  }
+}
